@@ -1,0 +1,81 @@
+.about_bg {
+  background: linear-gradient(180deg, #0b0b21 5.21%, #2e4683 100%);
+  .all_hero {
+    display: flex;
+    position: relative;
+    height: 900px;
+  }
+  .text {
+    display: flex;
+    gap: 137px;
+    flex-wrap: wrap;
+    // margin-left: 109px;
+    padding-top: 308px;
+    .all_txt {
+      // display: flex;
+      // flex-direction: column;
+      margin-top: 25px;
+    }
+    &_h1 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+
+      color: #ffffff;
+      width: 277px;
+    }
+    &_p {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 592px;
+      height: 351px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 39px;
+
+      color: #ffffff;
+    }
+  }
+
+  .globus {
+    background-image: url(../../assets/images/globus.svg);
+    background-repeat: no-repeat;
+    // background-position-y: 134px;
+    position: absolute;
+    // bottom: 50%;
+    right: 0px;
+    width: 750px;
+    // margin-left: -180px;
+    // background-size: contain;
+    margin-top: 134px;
+    padding-bottom: 150px;
+    .tops {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 471px;
+
+      width: 110px;
+      height: 82px;
+      border: 1px solid #ffffff;
+      border-radius: 40px;
+      margin-left: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  .text {
+    &_p {
+      margin-top: -390px !important;
+    }
+  }
+  .all_hero {
+    height: 1200px !important;
+  }
+}
