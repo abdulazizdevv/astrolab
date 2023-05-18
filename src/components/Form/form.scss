@@ -1,0 +1,62 @@
+.all_form {
+  &_h2 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #ffffff;
+  }
+  form {
+    input {
+      background-color: transparent;
+      opacity: 0.5;
+      border: 1px solid #ffffff;
+      border-radius: 15px;
+      width: 100%;
+      padding: 15px 11px;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 36px;
+
+      color: #ffffff;
+      margin-top: 20px;
+    }
+    textarea {
+      opacity: 0.5;
+      border: 1px solid #ffffff;
+      border-radius: 15px;
+      margin-top: 20px;
+      background-color: transparent;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 36px;
+
+      color: #ffffff;
+      padding: 15px 11px;
+    }
+    .btn_send {
+      background: #267fe1;
+      border-radius: 30px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      /* identical to box height */
+
+      text-align: center;
+      padding: 6px 39px;
+      border: none;
+      color: #ffffff;
+      margin-top: 30px;
+    }
+  }
+}

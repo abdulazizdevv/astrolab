@@ -1,10 +1,11 @@
 .home_video {
-  position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden !important;
+
   .video-bg {
     width: 100%;
     height: 100vh;
@@ -19,179 +20,11 @@
   }
 }
 
-// wecwecwec
-
-// header {
-//   padding: 1.8rem 0;
-//   transition: 0.5s;
-//   top: 0;
-//   // z-index: 9999;
-//   width: 100%;
-// }
-
-// wevwev
-
-.navbar-container input[type="checkbox"] {
-  position: absolute;
+.navbar-container {
   display: block;
-  height: 32px;
-  width: 30px;
-  // top: 20px;
-  z-index: 5;
-  opacity: 0;
-  cursor: pointer;
+  position: relative;
+  height: 64px;
 }
-
-.navbar input[type="checkbox"],
-.navbar .hamburger-lines {
-  display: none;
-}
-
-.navbar-container input[type="checkbox"],
-.navbar-container .hamburger-lines {
-  display: block;
-}
-
-.navbar-container .hamburger-lines {
-  display: block;
-  height: 24px;
-  width: 32px;
-  // position: absolute;
-  top: 20px;
-  // left: 20px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.navbar-container .hamburger-lines .line {
-  display: block;
-  height: 3px;
-  width: 100%;
-  border-radius: 10px;
-  background: #fff;
-}
-.navbar-container .hamburger-lines .line1 {
-  transform-origin: 0% 0%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.navbar-container .hamburger-lines .line2 {
-  transition: transform 0.1s ease-in-out;
-}
-
-.navbar-container .hamburger-lines .line3 {
-  transform-origin: 0% 100%;
-  transition: transform 0.3s ease-in-out;
-}
-.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-  transform: rotate(45deg);
-}
-
-.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-  transform: scaleY(0);
-}
-
-.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-  transform: rotate(-45deg);
-}
-// wevwev
-
-// .header-container {
-//   position: absolute;
-
-//   bottom: 252px;
-//   right: 354px;
-//   width: 100%;
-//   // filter: blur(12.5px);
-//   // background-color: #D8F2FD;
-//   // background: radial-gradient(circle at 50% 50%,rgb(23, 9, 56), rgba(76, 0, 255, 0));
-//   height: 100vh;
-//   clip-path: circle(0px at calc(100% - 45px) 45px);
-//   transition: 0.3s all ease-in-out;
-// }
-
-// .header-container ul {
-//   z-index: 99999 !important;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   list-style: none;
-//   // text-align: center;
-// }
-
-// .header-container ul li {
-//   margin: 2em 0;
-// }
-
-// .header-container ul li a:hover {
-//   border-radius: 40px;
-//   transition: 0.5s all ease;
-//   transform: translateX(-50px);
-// }
-
-// .menu_btn {
-//   //   width: 50px;
-//   //   height: 50px;
-//   position: absolute;
-//   right: 20px;
-//   top: 23px;
-//   z-index: 1;
-//   text-align: center;
-//   line-height: 2.6em;
-//   background: transparent;
-//   //   border-radius: 50px;
-//   cursor: pointer;
-//   color: white;
-//   font-size: 1.2em;
-//   transition: 0.3s all ease;
-//   box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.05),
-//     3px 3px 9px rgba(0, 0, 0, 0.5);
-// }
-
-// .menu_btn:hover {
-//   transition: 0.3s all ease;
-//   transform: scale(1.2);
-// }
-
-// #active:checked ~ .header-container {
-//   clip-path: circle(80%);
-// }
-
-// #active:checked ~ .menu_btn {
-//   background: transparent;
-//   //   color: #fff;
-// }
-
-// #active {
-//   display: none;
-// }
-// .active1 {
-// }
-
-// .navbar-shrink {
-//   background-color: #0179ac;
-//   box-shadow: 0 0 8px #40b5d3;
-//   padding: 1rem 0 !important;
-// }
-
-// .mobile {
-//   display: none;
-// }
-
-// @media screen and (max-width: 800px) {
-//   .mobile {
-//     margin-top: 20px;
-//     display: block;
-//   }
-//   nav {
-//     display: none;
-//   }
-// }
-
-// earbwetbwrtbr==================================================================================
 
 .header {
   position: fixed;
@@ -200,23 +33,27 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  padding: 0 40px;
+  //   padding: 0 40px;
   width: 100%;
 
   .navbar input[type="checkbox"],
   .navbar .hamburger-lines {
     display: none;
   }
-
   .menu-items {
-    // position: absolute;
-    // right: 50% !important;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(6px);
+    padding-top: 2%;
+    padding-left: 17.5%;
+  }
+  .active1 {
+    overflow-y: hidden;
   }
   .menu-items li,
   a {
     // margin-left: -400px;
-    width: 100%;
+    // width: 100%;
     color: white;
     text-decoration: none;
     list-style: none;
@@ -225,11 +62,16 @@
     font-weight: 700;
     font-size: 64px;
     line-height: 77px;
-
     color: #ffffff;
     line-height: 1em;
     text-align: left;
     transition: 0.3s all ease;
+    padding: 18px;
+    &:hover {
+      color: #fff;
+      transform: translateX(-40px);
+      transition: 0.5s;
+    }
   }
 
   .navbar a {
@@ -238,33 +80,12 @@
     font-weight: 500;
     transition: color 0.3s ease-in-out;
     font-family: "Proxima Nova", sans-serif;
-    text-align: left;
     padding-bottom: 24px;
-  }
-  .menu-items ul li p {
-    color: #fff !important;
-    padding: 5px;
-    cursor: pointer;
-  }
-
-  button:hover a {
-    color: #0088a9;
-  }
-
-  button:hover {
-    background: #fff;
-    color: #0088a9;
   }
 
   .navbar-container input[type="checkbox"],
   .navbar-container .hamburger-lines {
     display: block;
-  }
-
-  .navbar-container {
-    display: block;
-    position: relative;
-    height: 64px;
   }
 
   .navbar-container input[type="checkbox"] {
@@ -359,7 +180,7 @@
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-    transform: scaleY(0) ;
+    transform: scaleY(0);
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
@@ -369,7 +190,7 @@
 
 .vector {
   display: flex;
-  margin-top: -50px;
+  margin-top: -90px;
   align-items: center;
   justify-content: center;
   animation-duration: 1s;
@@ -378,19 +199,19 @@
 }
 
 @keyframes vectors {
-  0%{
+  0% {
     transform: translateY(0px);
   }
-  25%{
+  25% {
     transform: translateY(7px);
   }
-  50%{
+  50% {
     transform: translateY(14px);
   }
-  75%{
+  75% {
     transform: translateY(7px);
   }
-  100%{
+  100% {
     transform: translateY(0px);
   }
 }
