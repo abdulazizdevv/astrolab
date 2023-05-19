@@ -22,28 +22,26 @@ export const Home = () => {
     } else {
       setToggle(true);
       vectorRef.current.style.display = "block";
-      document.body.classList.remove("active1");
+      // document.body.classList.remove("active1");
       document.body.style.overflow = "auto";
     }
   };
 
-  const onScroll = (id) =>{
+  const onScroll = (id) => {
     setToggle((prev) => !prev);
-    document.getElementById("navbar").style.display = "none"
-    
+    document.getElementById("navbar").style.display = "none";
+
     setTimeout(() => {
-      window.location.hash = id
+      window.location.hash = id;
       document.body.style.overflow = "auto";
     }, 0);
-    
-  }
-
+  };
 
   return (
     <div className="home_video" id="home">
       <video src={astrolabVideo} loop autoPlay muted className="video-bg " />
 
-      <header ref={headRef} id="navbar" >
+      <header ref={headRef} id="navbar">
         <div className="header">
           <div className="mobile">
             <div className="navbar-container">
@@ -59,18 +57,19 @@ export const Home = () => {
                 <span className="line line2" />
                 <span className="line line3" />
               </div>
-
-              <ul className="menu-items" hidden={toggle}>
-                <li className="link_item" id="projectPage">
-                  <a onClick={() => onScroll('about')}>About us</a>
-                </li>
-                <li id="aboutPage">
-                  <a href="#">Portfolio</a>
-                </li>
-                <li id="contactPage">
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
+              <div className="all_parent">
+                <ul className="menu-items" hidden={toggle}>
+                  <li className="link_item" id="projectPage">
+                    <a onClick={() => onScroll("about")}>About us</a>
+                  </li>
+                  <li id="aboutPage">
+                    <a href="#">Portfolio</a>
+                  </li>
+                  <li id="contactPage">
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

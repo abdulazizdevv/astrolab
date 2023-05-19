@@ -73,6 +73,7 @@
   text-decoration: none;
 
   &::after {
+    background: #000066;
     content: "";
     display: block;
     position: absolute;
@@ -82,7 +83,6 @@
 
     height: 6.65px;
 
-    background: #000066;
 
     transform-origin: right top;
     transform: scale(0, 1);
@@ -96,4 +96,7 @@
   //   transform-origin: left top;
   //   transform: scale(1, 1);
   // }
+}
+.res{
+  background: red;
 }

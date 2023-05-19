@@ -28,19 +28,8 @@
   align-items: center;
   justify-content: center;
 
-  &:hover {
-    background-color: #f9f8f7;
+  background-color: #f9f8f7;
 
-    img {
-      filter: brightness(100%);
-    }
-  }
-
-  img {
-    filter: grayscale(1);
-
-    &:hover {
-      filter: brightness(100%);
-    }
-  }
 }
+
+

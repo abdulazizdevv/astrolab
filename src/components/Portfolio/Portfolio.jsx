@@ -7,7 +7,7 @@ import imagesLogo from "../../assets/images/logoPortfolio.svg";
 import imagesLogoMulte from "../../assets/images/multeLogo.svg";
 import visited from "../../assets/images/visitedBtn.svg";
 import multed from "../../assets/images/multe.svg";
-import vectorTop from "../../assets/images/top.svg";
+import vectorTop from "../../assets/images/seeVector.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

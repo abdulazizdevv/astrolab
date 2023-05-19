@@ -46,6 +46,8 @@
     backdrop-filter: blur(6px);
     padding-top: 2%;
     padding-left: 17.5%;
+    display: flex;
+    flex-direction: column;
   }
   .active1 {
     overflow-y: hidden;
@@ -67,6 +69,7 @@
     text-align: left;
     transition: 0.3s all ease;
     padding: 18px;
+    display: iinf;
     cursor: pointer;
     &:hover {
       color: #fff;
