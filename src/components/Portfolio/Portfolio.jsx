@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./portfolio.scss";
 import data from "../../../data";
 // import images from "../../assets/images/AlZargar.svg";
@@ -8,14 +8,21 @@ import imagesLogoMulte from "../../assets/images/multeLogo.svg";
 import visited from "../../assets/images/visitedBtn.svg";
 import multed from "../../assets/images/multe.svg";
 import vectorTop from "../../assets/images/top.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Portfolio = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="all_portfolio" id="portfolio">
       <div className="container">
         <div className="components">
-          <h2 className="portfolio_h2">Portfolio</h2>
-          <div className="portfolio_btns">
+          <h2 className="portfolio_h2 " data-aos="fade-right">
+            Portfolio
+          </h2>
+          <div className="portfolio_btns " data-aos="fade-left">
             <button>Website</button>
             <button>Mobile</button>
             <button>CRM</button>
@@ -23,7 +30,7 @@ export const Portfolio = () => {
           </div>
         </div>
         <div className="all_cards">
-          <div className="cards-left">
+          <div className="cards-left" data-aos="fade-up">
             <a href="#">
               <div className="titles">
                 <h4 className="cards_title">Alzargar</h4>
@@ -38,7 +45,7 @@ export const Portfolio = () => {
             </a>
           </div>
           <div className="cards-right">
-            <div className="cards_end">
+            <div className="cards_end" data-aos="fade-up">
               <a href="#">
                 <div className="titles_end">
                   <h4 className="cards_title">Alzargar</h4>
@@ -52,7 +59,7 @@ export const Portfolio = () => {
                 </a>
               </a>
             </div>
-            <div className="cards_end">
+            <div className="cards_end" data-aos="fade-up">
               <a href="#">
                 <div className="titles_end">
                   <h4 className="cards_title">Alzargar</h4>
@@ -66,7 +73,7 @@ export const Portfolio = () => {
                 </a>
               </a>
             </div>
-            <div className="cards_end">
+            <div className="cards_end" data-aos="fade-up">
               <a href="#">
                 <div className="titles_end">
                   <h4 className="cards_title">Alzargar</h4>
@@ -80,7 +87,7 @@ export const Portfolio = () => {
                 </a>
               </a>
             </div>
-            <div className="cards_end">
+            <div className="cards_end" data-aos="fade-up">
               <a href="#">
                 <div className="titles_end">
                   <h4 className="cards_title">Alzargar</h4>
@@ -97,7 +104,7 @@ export const Portfolio = () => {
           </div>
         </div>
         <div className="bottom_card">
-          <div className="bottom_card_right">
+          <div className="bottom_card_right" data-aos="fade-up">
             <div className="cards-right">
               <div className="cards_end">
                 <a href="#">
@@ -131,7 +138,7 @@ export const Portfolio = () => {
               </div>
             </div>
           </div>
-          <div className="cards-left">
+          <div className="cards-left" data-aos="fade-up">
             <a href="#">
               <div className="titles">
                 <h4 className="cards_title">Alzargar</h4>
@@ -146,7 +153,7 @@ export const Portfolio = () => {
             </a>
           </div>
           <div className="cards-right">
-            <div className="cards_end">
+            <div className="cards_end" data-aos="fade-up">
               <a href="#">
                 <div className="titles_end">
                   <h4 className="cards_title">Alzargar</h4>
@@ -160,13 +167,12 @@ export const Portfolio = () => {
                 </a>
               </a>
             </div>
-          <div className="seemore">
-            <a href="#">
-              See more <img className="top_vector" src={vectorTop} alt="" />
-            </a>
+            <div className="seemore">
+              <a href="#">
+                See more <img className="top_vector" src={vectorTop} alt="" />
+              </a>
+            </div>
           </div>
-          </div>
-
         </div>
       </div>
     </div>

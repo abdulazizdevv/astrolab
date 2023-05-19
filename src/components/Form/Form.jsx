@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./form.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Form = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="all_form">
       <h2 className="all_form_h2">Form</h2>
@@ -12,6 +17,7 @@ export const Form = () => {
           type="text"
           name="fullname"
           id=""
+          data-aos="zoom-out-up"
         />
         <input
           placeholder="Phone number"
@@ -19,6 +25,7 @@ export const Form = () => {
           type="tel"
           name="Phone number"
           id=""
+          data-aos="zoom-out-up"
         />
 
         <input
@@ -27,16 +34,11 @@ export const Form = () => {
           type="email"
           name="Email"
           id=""
+          data-aos="zoom-out-up"
         />
-        <textarea
-          placeholder="Your text"
-          name="text"
-          id=""
-        ></textarea>
+        <textarea placeholder="Your text" data-aos="zoom-out-up" name="text" id=""></textarea>
 
-        <button className="btn_send">
-            Send
-        </button>
+        <button className="btn_send">Send</button>
       </form>
     </div>
   );

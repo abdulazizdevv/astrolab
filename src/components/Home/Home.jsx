@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./home.scss";
-import astrolabVideo from "../../assets/video/astrolab.mp4";
+import astrolabVideo from "../../assets/video/home.mp4";
 import toggle from "../../assets/images/hamburger.svg";
 import toggleMiddle from "../../assets/images/toggleMiddile.svg";
 import toggle1 from "../../assets/images/toggle1.svg";
