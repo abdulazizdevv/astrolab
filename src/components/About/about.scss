@@ -4,16 +4,12 @@
     display: flex;
     position: relative;
     height: 900px;
+    align-items: center;
   }
   .text {
     display: flex;
-    gap: 137px;
-    flex-wrap: wrap;
-    // margin-left: 109px;
-    padding-top: 308px;
+    align-items: flex-start;
     .all_txt {
-      // display: flex;
-      // flex-direction: column;
       margin-top: 25px;
     }
     &_h1 {
@@ -25,6 +21,7 @@
 
       color: #ffffff;
       width: 277px;
+      // margin-top: -320px;
     }
     &_p {
       display: flex;
@@ -43,28 +40,24 @@
   }
 
   .globus {
-    background-image: url(../../assets/images/globus.svg);
-    background-repeat: no-repeat;
-    // background-position-y: 134px;
+    position: relative;
+    &_img {
+      width: 558.09px;
+    }
     position: absolute;
-    // bottom: 50%;
     right: 0px;
-    height: 558.09px;
-    width: 558.09px;
-    // margin-left: -180px;
-    background-size: cover;
-    margin-top: 134px;
-    padding-bottom: 150px;
+    // top: 184px;
     .tops {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 471px;
       width: 81.69px;
       height: 61.02px;
       border: 1px solid #ffffff;
       border-radius: 40px;
-      margin-left: 300px;
+      position: absolute;
+      top: 382px;
+      left: 237px;
     }
   }
 }

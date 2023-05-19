@@ -1,24 +1,62 @@
 .all_team {
-  background: #f0f0f0;
-  height: 1117px;
-  img{
-    margin-top: 344px;
+  // height: 1117px;
+  color: #fff;
+  background: linear-gradient(180deg, #2e4582 0%, #2e4683 60.94%);
+  margin-bottom: 0px;
+  .team {
+    margin-top: 65px;
+    width: 250px;
   }
 }
-.alls{
-  position: relative;
 
-}
 .team_h2 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
-
-  color: #0b0b21;
-  position: absolute;
-
-  right: 599px;
+  // position: absolute;
+  text-align: center;
+  // right: 599px;
   top: 105px;
+}
+
+.team_all {
+  // display: flex;
+  // gap: 70px;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  &_card {
+    position: relative;
+
+    .vector_img {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background: #2f4683;
+      position: absolute;
+      padding: 25px 21px;
+      top: 220px;
+      left: 162px;
+    }
+  }
+  .Surname {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #ffffff;
+  }
+  .positions {
+    position: absolute;
+    left: 55px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+
+    color: #ffffff;
+  }
 }

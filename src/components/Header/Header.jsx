@@ -3,39 +3,48 @@ import Logo from "../../assets/images/logo.svg";
 import "./header.scss";
 
 export const Header = () => {
-  const [top, setTop] = useState("none");
+  const [top, setTop] = useState(true);
   const topRef = useRef();
   window.onscroll = function () {
     myFunction();
   };
 
   function myFunction() {
-    if (document.documentElement.scrollTop > 800) {
-      setTop("block");
-      // topRef.style.opacity="1"
+    if (document.documentElement.scrollTop > 15) {
+      setTop(false);
+      document.getElementById("mouse-toggle").style.display = "none";
+      document.getElementById("navbar").style.display = "none";
     } else {
-      setTop("none");
-      // topRef.style.opacity="0"
-
+      setTop(true);
+      document.getElementById("mouse-toggle").style.display = "flex";
+      document.getElementById("navbar").style.display = "block";
     }
   }
+
+  const topY = () => {
+    window.location.hash = ""
+    document.documentElement.scrollTop = 0
+  };
+
   return (
-    <div ref={topRef} className="tops_nav" style={{display:top}}>
+    <div className="tops_nav" hidden={top}>
       <div className="container">
         <div className="nav">
-          <img src={Logo} alt="" />
+          <div>
+            <img src={Logo} alt="logo" />
+          </div>
           <ul className="nav_list">
             <li className="nav_item">
-              <a href="#">HOME</a>
+              <a   onClick={topY} className="isActive">HOME</a>
             </li>
             <li className="nav_item">
-              <a href="#">ABOUT US</a>
+              <a href="#about" className="isActive">ABOUT US</a>
             </li>
             <li className="nav_item">
-              <a href="#">PORTFOLIO</a>
+              <a href="#portfolio" className="isActive">PORTFOLIO</a>
             </li>
             <li className="nav_item">
-              <a href="#">CONTACT</a>
+              <a href="#contact" className="isActive">CONTACT</a>
             </li>
           </ul>
         </div>

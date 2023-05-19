@@ -10,6 +10,9 @@ import mouse from "../../assets/images/mouse.svg";
 
 export const Home = () => {
   const [toggle, setToggle] = useState(true);
+
+  const headRef = useRef();
+
   const vectorRef = useRef();
   const ischecked = (evt) => {
     if (evt.target.checked === true) {
@@ -24,11 +27,23 @@ export const Home = () => {
     }
   };
 
+  const onScroll = (id) =>{
+    setToggle((prev) => !prev);
+    document.getElementById("navbar").style.display = "none"
+    
+    setTimeout(() => {
+      window.location.hash = id
+      document.body.style.overflow = "auto";
+    }, 0);
+    
+  }
+
+
   return (
-    <div className="home_video">
+    <div className="home_video" id="home">
       <video src={astrolabVideo} loop autoPlay muted className="video-bg " />
 
-      <header id="navbar">
+      <header ref={headRef} id="navbar" >
         <div className="header">
           <div className="mobile">
             <div className="navbar-container">
@@ -47,7 +62,7 @@ export const Home = () => {
 
               <ul className="menu-items" hidden={toggle}>
                 <li className="link_item" id="projectPage">
-                  <a href="#">About us</a>
+                  <a onClick={() => onScroll('about')}>About us</a>
                 </li>
                 <li id="aboutPage">
                   <a href="#">Portfolio</a>
@@ -59,7 +74,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="vector">
+        <div className="vector" id="mouse-toggle">
           <img ref={vectorRef} src={mouse} alt="" />
         </div>
       </header>

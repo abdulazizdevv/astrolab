@@ -32,8 +32,6 @@ export const Form = () => {
           placeholder="Your text"
           name="text"
           id=""
-          rows="7"
-          cols="37"
         ></textarea>
 
         <button className="btn_send">

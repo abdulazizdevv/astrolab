@@ -4,10 +4,11 @@ import iconCall from "../../assets/images/call.svg";
 import iconEmail from "../../assets/images/email.svg";
 import iconLocation from "../../assets/images/location.svg";
 import { Form } from "../Form/Form";
+import Carousel from "../Carousel/Carousel";
 
 export const Contact = () => {
   return (
-    <div className="contact_all">
+    <div className="contact_all" id="contact">
       <div className="container ">
         <div className="row">
           <div className="col-6">
@@ -35,7 +36,9 @@ export const Contact = () => {
             <Form />
           </div>
 
-          <p className="poweredBy">Powered by <a href="#">Astrolab</a></p>
+          <p className="poweredBy">
+            Powered by <a href="#">Astrolab</a>
+          </p>
         </div>
       </div>
     </div>

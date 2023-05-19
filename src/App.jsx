@@ -5,18 +5,18 @@ import { Home } from "./components/Home/Home";
 import { Contact } from "./components/Contact/Contact";
 import { Form } from "./components/Form/Form";
 import { Header } from "./components/Header/Header";
+import Carousel from "./components/Carousel/Carousel";
+import { Layout } from "./components/Layout/Layout";
 
 function App() {
   return (
-    <>
+    <Layout>
       <Home />
-      <Header />
       <About />
       <Team />
       <Portfolio />
-      <Contact />
-      {/* <Form /> */}
-    </>
+      <Carousel />
+    </Layout>
   );
 }
 

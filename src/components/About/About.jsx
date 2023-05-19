@@ -1,10 +1,11 @@
 import React from "react";
 import "./about.scss";
+import globus from "../../assets/images/globus.svg";
 import Top from "../../assets/images/top.svg";
 
 export const About = () => {
   return (
-    <div className="about_bg ">
+    <div className="about_bg " id="about">
       <div className="all_hero container">
         <div className="text">
           <h1 className="text_h1">About us</h1>
@@ -18,6 +19,7 @@ export const About = () => {
           </p>
         </div>
         <div className="globus">
+          <img className="globus_img" src={globus} alt="" />
           <div className="tops">
             <img src={Top} alt="top" />
           </div>
